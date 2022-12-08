@@ -1,0 +1,12 @@
+version: '3.1'
+services:
+  postgresql:
+    image: postgres:latest
+    ports:
+    - '3306:3306'
+    volumes:
+      - ./data:/var/lib/postgres
+    environment:
+      - POSTGRES_PASSWORD=123456789
+      - POSTGRES_USER=app
+      - POSTGRES_DB=db
